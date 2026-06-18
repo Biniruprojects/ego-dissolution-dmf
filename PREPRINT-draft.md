@@ -2,7 +2,7 @@
 
 **Sören van Krunckelsven**
 Biniru Projects, Antwerp, Belgium — independent research
-Correspondence: itzamniaproject@gmail.com
+Correspondence: biniruprojects@proton.me
 
 *Preprint — draft v1, 18 June 2026. Not peer-reviewed.*
 
