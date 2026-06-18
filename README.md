@@ -57,7 +57,7 @@ The empirical 5-HT₂A map is the [¹¹C]Cimbi-36 atlas (Beliveau et al. 2017) v
 
 ## Citation
 
-Preprint in preparation (Zenodo). The rendered manuscript is [`PREPRINT-ego-dissolution-dmf.pdf`](PREPRINT-ego-dissolution-dmf.pdf) (7 pages; regenerate from source with `make_pdf.py`); the source is [`PREPRINT-draft.md`](PREPRINT-draft.md). Until a DOI is minted, cite this repository.
+Preprint in preparation (Zenodo). The manuscript PDF [`PREPRINT-ego-dissolution-dmf.pdf`](PREPRINT-ego-dissolution-dmf.pdf) (7 pages, LaTeX-typeset) is rendered from the Markdown source [`PREPRINT-draft.md`](PREPRINT-draft.md); a quick pure-Python render is also available via `make_pdf.py`. Until a DOI is minted, cite this repository.
 
 ## Note on authorship
 
