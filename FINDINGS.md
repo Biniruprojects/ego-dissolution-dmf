@@ -169,9 +169,11 @@ condities 3,1-3,4 Hz. Resultaat:
 - trouwe N2O: LZc **−4,2%** (disinhibitie = hypersynchronie bij gelijk vuren, NIET entropie), integ −28%.
 - COMBO: LZc **+1,0%** (marginaal), integratie **−76%**.
 
+> ⚠️ **SUPERSEDED — de canonieke getallen zijn de multi-seed FIRMING (zie sectie hieronder), NIET deze single-run-waarden.** Bovenstaande v8-cijfers zijn één enkele ruis-realisatie. De in preprint/README **gerapporteerde** waarden zijn de multi-seed-gemiddelden (n=6): COMBO integratie **−56% ± 12** (niet −76%), LZc **+0,9% ± 0,5**; 5-HT2A integ −46%; N2O integ −18%. De single-run −76% valt binnen de per-seed-spreiding (−40…−76%). Gebruik altijd de multi-seed-set. (Echte-map-replicatie, n=6: COMBO −61% ± 19, ononderscheidbaar.)
+
 **Eerlijke capstone-conclusie:** bij gecontroleerd vuren is de combo **dissociatie-gedomineerd, niet
-entropie-gedomineerd** — sterke, robuuste integratie-instorting (−76%) met grofweg behouden complexiteit
-(+1%, binnen ruis; de 5-HT2A-entropieboost wordt door de N2O-disinhibitie opgeheven). Dat is een
+entropie-gedomineerd** — sterke, robuuste integratie-instorting (multi-seed **−56% ± 12**) met grofweg behouden complexiteit
+(**+0,9% ± 0,5**, klein maar reproduceerbaar over 6/6 seeds; de 5-HT2A-entropieboost wordt door de N2O-disinhibitie opgeheven). Dat is een
 plausibeler egodood-model dan de naïeve "maximale entropie"-intuïtie: het brein verliest zijn
 *integratie*, niet zijn lokale complexiteit. De naïeve combo-hypothese (hóge LZc + instorting) is dus
 slechts half waar — de instorting is echt en groot; de entropie-stijging is marginaal.
