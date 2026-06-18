@@ -179,7 +179,7 @@ plausibeler egodood-model dan de naïeve "maximale entropie"-intuïtie: het brei
 slechts half waar — de instorting is echt en groot; de entropie-stijging is marginaal.
 
 **Caveats (vóór enige preprint-claim):** LZc-effecten klein (~1-5% op LZc≈0,95) → multi-seed-middeling
-voor significantie nodig; baseline-FC laag (gating ~0,006 / BOLD ~0,022) → −76% is relatief; één
+voor significantie nodig; baseline-FC laag (gating ~0,006 / BOLD ~0,022) → de instorting is relatief (canoniek −56% ± 12); één
 connectoom + synthetische 5-HT2A-map + één parameterset → robuustheid (seeds, doses, échte PET-map,
 G-sweep voor FC-magnitude) nog te doen. Maar het rate-matchen verwijdert het hoofd-confound en geeft
 de eerste *betrouwbare* lezing van het spoor.
