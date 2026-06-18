@@ -27,14 +27,15 @@ Reduced Wong–Wang DMF (Deco et al. 2014) on the empirical 76-region Hagmann co
 ```bash
 # main environment (model + analysis)
 python -m venv tvb-env
-tvb-env/Scripts/python -m pip install -r requirements.txt   # tvb-library 2.10, numpy, scipy, pandas, matplotlib, networkx
+# activate:  Linux/macOS ->  source tvb-env/bin/activate     |     Windows ->  tvb-env\Scripts\activate
+pip install -r requirements.txt   # tvb-library 2.10, numpy, scipy, pandas, matplotlib, networkx
 
-# the empirical 5-HT2A receptor map (separate env to avoid version clashes)
-python -m venv nmaps-env
-nmaps-env/Scripts/python -m pip install neuromaps nibabel
+# empirical 5-HT2A receptor map (separate env to avoid version clashes)
+python -m venv nmaps-env          # activate the same way
+pip install neuromaps nibabel
 ```
 
-Key scripts (run with the `tvb-env` interpreter unless noted):
+Key scripts (run inside the activated `tvb-env` unless noted):
 
 | Script | What it does |
 |---|---|
