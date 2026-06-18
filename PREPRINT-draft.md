@@ -147,7 +147,7 @@ A validated whole-brain dynamic mean-field model, with separable serotonergic an
 
 ## Data and code availability
 
-All simulation and analysis code (model drivers, analytic FIC, rate-matching, multi-seed/dose/connectome/G-sweep robustness scripts) and the result tables and figures are available in the project repository: `psyche-sim/` (`whole_brain_tvb*.py`, `results_*.csv`, `combo_map_*.png`, full development log in `FINDINGS.md`). Built on tvb-library 2.10; reproducible with fixed seeds.
+All simulation and analysis code, result tables, figures, and the full development log are openly available at **https://github.com/Biniruprojects/ego-dissolution-dmf** — model drivers, analytic FIC, the rate-matching control, and the multi-seed/dose/second-connectome/G-sweep robustness scripts (`whole_brain_tvb*.py`), result tables (`results_*.csv`), figures (`FIG*.png`), and the step-by-step development log (`FINDINGS.md`). Built on tvb-library 2.10 (Python 3.13) and reproducible with fixed seeds. The empirical 5-HT₂A map is the Beliveau et al. (2017) [¹¹C]Cimbi-36 atlas obtained via [netneurolab/hansen_receptors](https://github.com/netneurolab/hansen_receptors).
 
 ## Acknowledgements
 
