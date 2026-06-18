@@ -1,0 +1,12 @@
+# main model + analysis environment (tvb-env), Python 3.13
+tvb-library==2.10.0
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.3
+matplotlib==3.11.0
+networkx==3.6.1
+numba==0.65.1
+
+# empirical 5-HT2A receptor map (install in a SEPARATE venv, nmaps-env, to avoid clashes):
+#   neuromaps==0.0.7
+#   nibabel==5.4.2

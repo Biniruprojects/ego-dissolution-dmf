@@ -1,0 +1,16 @@
+# virtual environments (large; recreate from requirements)
+tvb-env/
+nmaps-env/
+
+# python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# large neuroimaging volumes (fetched at runtime)
+*.nii
+*.nii.gz
+
+# os cruft
+.DS_Store
+Thumbs.db

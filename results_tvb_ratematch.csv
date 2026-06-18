@@ -1,0 +1,5 @@
+Condition,LZc,Integration,rE_Hz,dLZc_%,dInteg_%
+Baseline,0.9516,0.0058,3.24,0.0,0.0
+LSD/DMT (5-HT2A up),0.9994,0.0023,3.12,5.0,-60.3
+N2O faithful (disinhib),0.9117,0.0042,3.39,-4.2,-27.6
+COMBO (both),0.961,0.0014,3.21,1.0,-75.9

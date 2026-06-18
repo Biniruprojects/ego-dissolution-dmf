@@ -1,0 +1,5 @@
+Condition,LZc,Integration,dLZc_%,dInteg_%
+Baseline,0.6018,0.0617,0.0,0.0
+LSD/DMT (5-HT2A up),0.5762,0.109,-4.3,76.7
+N2O (NMDA block),0.4635,0.0239,-23.0,-61.3
+COMBO (both),0.4735,0.0334,-21.3,-45.9
