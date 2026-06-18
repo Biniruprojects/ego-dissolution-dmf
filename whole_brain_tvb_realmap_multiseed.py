@@ -103,6 +103,7 @@ def metrics(S_e):
 JNEI = 0.15 * (1 - BLOCK_EI); Gn = G_WP * (1 - BLOCK_G)
 specs = {"LSD": (GAIN_S, 0.15, G_WP), "N2O": (0.0, JNEI, Gn), "COMBO": (GAIN_S, JNEI, Gn)}
 acc = {c: {"dLZc": [], "dInteg": []} for c in specs}
+perseed = []   # raw per-(seed,condition) rows for full traceability
 for si in SEEDS:
     Jb = fic(np.full(N, A_E0), 0.15, G_WP, si)
     lz_b, in_b = metrics(run(build(np.full(N, A_E0), 0.15, Jb, G_WP, si), 25000.0, 8000.0))
@@ -113,6 +114,9 @@ for si in SEEDS:
         lz, ig = metrics(run(build(a_e, jnei, Ji, G, si), 25000.0, 8000.0))
         dlz = 100 * (lz / lz_b - 1); dig = 100 * (ig / in_b - 1)
         acc[cn]["dLZc"].append(dlz); acc[cn]["dInteg"].append(dig)
+        perseed.append(dict(seed=si, condition=cn, base_LZc=round(lz_b, 4), base_Integ=round(in_b, 4),
+                            cond_LZc=round(lz, 4), cond_Integ=round(ig, 4),
+                            dLZc_pct=round(dlz, 2), dInteg_pct=round(dig, 1)))
         line += "  %s(dLZc%+.1f dInt%+.0f)" % (cn, dlz, dig)
     print(line, flush=True)
 
@@ -124,6 +128,8 @@ for c in specs:
                      dInteg_mean=round(ig.mean(), 1), dInteg_std=round(ig.std(), 1)))
 sm = pd.DataFrame(rows); print(sm.to_string(index=False))
 sm.to_csv(r"E:\BiniruProjects\psyche-sim\results_realmap_multiseed.csv", index=False)
+pd.DataFrame(perseed).to_csv(r"E:\BiniruProjects\psyche-sim\results_realmap_multiseed_perseed.csv", index=False)
+print("Saved per-seed rows: results_realmap_multiseed_perseed.csv (%d rows)" % len(perseed))
 co = sm[sm.Condition == "COMBO"].iloc[0]
 print("\n[real-map COMBO] dInteg = %.0f%% +/- %.0f   dLZc = %+.2f%% +/- %.2f" % (co.dInteg_mean, co.dInteg_std, co.dLZc_mean, co.dLZc_std))
 print("(compare synthetic multi-seed: dInteg -56 +/- 12, dLZc +0.9 +/- 0.5)")

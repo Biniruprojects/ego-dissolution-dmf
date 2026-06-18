@@ -136,6 +136,7 @@ cond_specs = {
 }
 
 acc = {c: {"dLZc": [], "dInteg": []} for c in cond_specs}
+perseed = []   # raw per-(seed,condition) rows for full traceability
 for si in SEEDS:
     rng = np.random.default_rng(si)
     dens = np.linspace(0.1, 1.0, N); rng.shuffle(dens)   # per-seed 5-HT2A map
@@ -151,6 +152,9 @@ for si in SEEDS:
         lz, ig = metrics(Se)
         dlz = 100 * (lz / lz_b - 1); dig = 100 * (ig / in_b - 1)
         acc[cname]["dLZc"].append(dlz); acc[cname]["dInteg"].append(dig)
+        perseed.append(dict(seed=si, condition=cname, base_LZc=round(lz_b, 4), base_Integ=round(in_b, 4),
+                            cond_LZc=round(lz, 4), cond_Integ=round(ig, 4),
+                            dLZc_pct=round(dlz, 2), dInteg_pct=round(dig, 1)))
         line += "  %s(dLZc %+.1f%%, dInt %+.0f%%)" % (cname, dlz, dig)
     print(line, flush=True)
 
@@ -166,6 +170,8 @@ for c in cond_specs:
 sm = pd.DataFrame(rows)
 print(sm.to_string(index=False))
 sm.to_csv(r"E:\BiniruProjects\psyche-sim\results_multiseed.csv", index=False)
+pd.DataFrame(perseed).to_csv(r"E:\BiniruProjects\psyche-sim\results_multiseed_perseed.csv", index=False)
+print("Saved per-seed rows: results_multiseed_perseed.csv (%d rows)" % len(perseed))
 co = sm[sm.Condition == "COMBO"].iloc[0]
 print("\n[verdict] COMBO integration collapse: mean %.0f%% (%s seeds negative) -> %s"
       % (co.dInteg_mean, co.Integ_neg_frac, "ROBUST" if co.Integ_neg_frac.startswith(str(len(SEEDS))) else "variable"))
