@@ -1,0 +1,7 @@
+# Binary assets — never apply text/line-ending (CRLF) conversion, so PDF/PNG/NPY
+# stay byte-exact on every checkout and clone (protects the Zenodo PDF integrity).
+*.pdf    binary
+*.png    binary
+*.npy    binary
+*.nii    binary
+*.nii.gz binary
